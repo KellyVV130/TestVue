@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <mynavbar></mynavbar>
+    <br><br><br><br>
     <router-view/>
+    <el-backtop visibility-height="0" right="100" bottom="100"></el-backtop>
   </div>
 </template>
 
 <script>
+import mynavbar from './components/AppComponents/Navbar.vue'
+
 export default {
-  name: 'App'
+  name: 'app',
+  components: {
+    mynavbar
+  }
 }
 </script>
 
@@ -18,6 +25,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
